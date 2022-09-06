@@ -1,0 +1,103 @@
+@import "../../styles/global.scss";
+
+$color-01: #f4f1de;
+$color-02: #3d405b;
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pokemon__list {
+    margin-top: 40px;
+    display:  flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: $color-02;
+    font-weight: 500;
+
+}
+
+.pokemon {
+    padding: 20px;
+    width: 20%;
+
+    @include for-size(1199) {
+        width: 25%;
+    }    
+    @include for-size(991) {
+        width: 33%;
+    }    
+    @include for-size(575) {
+        width: 50%;
+    }    
+
+    .pokemon__block {
+        background-color: $color-01;
+        border-radius: 20px;
+        text-align: center;
+        padding: 10px;
+        height: 100%;
+        cursor: pointer;
+
+        display:  flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+            box-shadow: 0 0 2px 2px  #00d0ff;
+        }
+    }
+}
+
+.pokemon__detail {
+    width: 100%;
+    height:  100vh;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color-02;
+    font-weight: 500;
+    
+    .pokemon__detail--block {
+        max-width: 280px;
+        background-color: $color-01;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .pokemon__thumnail {
+        .btn__close {
+            text-align: right;
+            padding: 20px;
+            padding-bottom: 10px;
+            button {
+                font-size: 22px;
+                cursor: pointer;
+                padding: 3px;
+            }
+        }
+
+        .thumnail {
+            background-image: linear-gradient(0deg,#f2cc8f,#f8f3d9);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            p {
+                font-size: 25px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .pokemon__detail--content {
+        padding: 20px;
+        text-align: center;
+        min-height: 150px;
+    }
+
+}

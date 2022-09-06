@@ -1,0 +1,123 @@
+.container {
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+div {
+  width: 100%;
+}
+
+button {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@mixin for-size($breakpoint) {
+    @if $breakpoint == 1920 {
+      @media (min-width: 1920px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 1599 {
+      @media (max-width: 1599px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 1499 {
+      @media (max-width: 1499px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 1439 {
+      @media (max-width: 1439px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 1399 {
+      @media (max-width: 1399px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 1200 {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 1199 {
+      @media (max-width: 1199px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 992 {
+      @media (min-width: 992px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 991 {
+      @media (max-width: 991px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 768 {
+      @media (min-width: 768px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 767 {
+      @media (max-width: 767px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 576 {
+      @media (min-width: 576px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 575 {
+      @media (max-width: 575px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 375 {
+      @media (max-width: 375px) {
+        @content;
+      }
+    }
+    @if $breakpoint == 359 {
+      @media (max-width: 359px) {
+        @content;
+      }
+    }
+  }
